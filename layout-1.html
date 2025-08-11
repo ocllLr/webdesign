@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹디자인개발기능사 레이아웃 A-1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+      /*가운데 정렬*/
+    }
+    #header {
+      width: 1200px;
+      /* height: 100px; */
+      /* background-color: #efefef; */
+      display: flex;  /*가로 정렬로*/
+    }
+    #header .logo {
+      width: 20%;
+      height: 100px;
+      background-color: #f2e0e0;
+    }
+    #header .nav {
+      width: 80%;
+      height: 100px;
+      background-color: #e4caca;
+    }
+    #slider {
+      width: 1200px;
+      height: 300px;
+      background-color: #edc662;
+    }
+    #content {
+      width: 1200px;
+      display: flex;
+    }
+    #content .content1 {
+      width: 33.333%;
+      height: 200px;
+      background-color: #f1f8c3;
+    }
+    #content .content2 {
+      width: 33.333%;
+      height: 200px;
+      background-color: #eefd8c;
+    }
+    #content .content3 {
+      width: 33.333%;
+      height: 200px;
+      background-color: #e2fb3f;
+    }
+    #footer {
+      width: 1200px;
+      display: flex;
+    }
+    #footer .footer1 {
+      width: 20%;
+      height: 100px;
+      background-color: #f7b3ff;
+    }
+    #footer .footer2 {
+      width: 60%;
+      height: 100px;
+      background-color: #ef74fc;
+    }
+    #footer .footer3 {
+      width: 20%;
+      height: 100px;
+      background-color: #e72dfc;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <div class="logo"></div>
+      <div class="nav"></div>
+    </div>
+    <!-- //header -->
+    
+    <div id="slider"></div>
+    <!-- //slider -->
+
+    <div id="content">
+      <div class="content1"></div>
+      <div class="content2"></div>
+      <div class="content3"></div>
+    </div>
+    <!-- //contents -->
+
+    <div id="footer">
+      <div class="footer1"></div>
+      <div class="footer2"></div>
+      <div class="footer3"></div>
+    </div>
+    <!-- //footer -->
+  </div>
+</body>
+</html>
