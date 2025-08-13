@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹디자인개발기능사 레이아웃 B-1</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    #wrap {width: 100%; margin: 0 auto;}
+    #header{
+      width: 100%;
+      background-color: #efefef;
+    }
+    #header .header_container{
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+    }
+    #header .header_container .logo{
+      width: 20%;
+      height: 100px;
+      background-color: #7e7e7e;
+    }
+    #header .header_container .nav{
+      width: 80%;
+      height: 100px;
+      background-color: #bebdbd;
+    }
+    #slider{
+      width: 1200px;
+      height: 300px;
+      background-color: #e2e2e2;
+      margin: 0 auto;
+    }
+    #contents{
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+    }
+    #contents .contents1{
+      width: 33.333%;
+      height: 200px;
+      background-color: #d1d1d1;
+    }
+    #contents .contents2{
+      width: 33.333%;
+      height: 200px;
+      background-color: #afaaaa;
+    }
+    #contents .contents3{
+      width: 33.333%;
+      height: 200px;
+      background-color: #8e8787;
+    }
+    #footer{
+      width: 100%;
+      background-color: #efefef;
+    }
+    #footer .footer_container{
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+    }
+    #footer .footer_container .footer1{
+      width: 20%;
+      height: 100px;
+      background-color: #888787;
+    }
+    #footer .footer_container .footer2{
+      width: 80%;
+    }
+    #footer .footer_container .footer2-1{
+      height: 50px;
+      background-color: #a9a7a7;
+    }
+    #footer .footer_container .footer2-2{
+      height: 50px;
+      background-color: #656464;
+    }   
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div class="header_container">
+        <h1 class="logo"></h1>
+        <nav class="nav"></nav>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <article id="slider"></article>
+    <!-- //slider -->
+
+    <main id="contents">
+      <section class="contents1"></section>
+      <section class="contents2"></section>
+      <section class="contents3"></section>
+    </main>
+    <!-- //contents -->
+
+    <footer id="footer">
+      <div class="footer_container">
+        <div class="footer1"></div>
+        <div class="footer2">
+          <div class="footer2-1"></div>
+          <div class="footer2-2"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+  </div>
+  <!-- //wrap -->
+</body>
+</html>
