@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    #wrap{
+      width: 100%;
+    }
+    #header{
+      width: 100%;
+      background-color: #dddddd;
+    }
+    #header .logo{
+      width: 20%;
+      height: 100px;
+      background-color: #feeded;
+    }
+    #header .nav{
+      width: 80%;
+      height: 100px;
+      background-color: #ffdddd;
+    }
+    #slider{
+      width: 100%;
+      height: 300px;
+    }
+    #contents{
+      width: 100%;
+    }
+    #contents .contents1{
+      width: 33.3333%;
+      height: 200px;
+      background-color: #f2ffdb;
+    }
+    #contents .contents2{
+      width: 33.3333%;
+      height: 200px;
+      background-color: #dffcae;
+    }
+    #contents .contents3{
+      width: 33.3333%;
+      height: 200px;
+      background-color: #d7ff93;
+    }
+    #footer{
+      width: 100%;
+      background-color: #cecece;
+    }
+    #footer .footer1{
+      width: 80%;
+    }
+    #footer .footer1 .footer1-1{
+      width: 100%;
+      height: 50px;
+      background-color: #f9fac0;
+    }
+    #footer .footer1 .footer1-2{
+      width: 100%;
+      height: 50px;
+      background-color: #fff989;
+    }
+    #footer .footer2{
+      width: 20%;
+      height: 100px;
+      background-color: #67ffca;
+    }
+    .container{
+      width: 1200px;
+      height: inherit;
+      background-color: #afafaf;
+      margin: 0 auto;
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div class="container">
+        <h1 class="logo"></h1>
+        <nav class="nav"></nav>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <article id="slider">
+      <div class="container"></div>    
+    </article>
+    <!-- //slider -->
+
+    <main id="contents">
+      <div class="container">
+        <section class="contents1"></section>
+        <section class="contents2"></section>
+        <section class="contents3"></section>
+      </div>
+    </main>
+    <!-- contents -->
+
+    <footer id="footer">
+      <div class="container">
+        <div class="footer1">
+          <div class="footer1-1"></div>
+          <div class="footer1-2"></div>
+        </div>
+        <div class="footer2"></div>
+      </div>
+    </footer>
+    <!-- //footer -->
+  </div>
+</body>
+</html>
