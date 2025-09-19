@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+a{
+  color: #333;
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+img{
+  width: 100%;
+  vertical-align: top;
+}
+/* wrap */
+#wrap{
+  width: 100%;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  height: inherit;
+  background-color: rgba(0,0,0,0.3);
+}
+/* header */
+#header{
+  width: 100%;
+  background-color: #efefef;
+}
+#header .container{
+  display: flex;
+}
+/* logo */
+#header .container .logo{
+  width: 20%;
+  height: 100px;
+  background-color: #e3e3e3;
+}
+#header .container .logo a{
+  display: flex;
+  padding: 30px 10px;
+}
+/* nav */
+#header .container .nav{
+  width: 80%;
+  height: 100px;
+  background-color: #e4e0e0;
+  z-index: 1000;
+}
+#header .container .nav >ul{
+  display: flex;
+  justify-content: right;
+  margin: 46px;
+}
+#header .container .nav >ul>li{
+  position: relative;
+}
+#header .container .nav >ul>li>a{
+  background-color: #d7d2b8;
+  padding: 15px 40px;
+  display: inline-block;
+  font-weight: bold;
+}
+#header .container .nav >ul>li>a:hover{
+  background-color: #c0ba9c;
+}
+#header .container .nav >ul>li>ul{
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  display: none;
+}
+#header .container .nav >ul>li>ul>li>a{
+  /* background-color: #fff; */
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+}
+#header .container .nav >ul>li>ul>li>a:hover{
+  background-color: #7e7b7b;
+  color: #fff;
+}
+/* 가상배경 */
+#header .container{
+  position: relative;
+  z-index: 1000;
+}
+#header .container::after{
+  content: '';
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  transition: all 400ms;
+  z-index: -1;
+}
+#header .container.on::after{
+  height: 178px;
+}
+/* slider */
+#slider{
+  width: 100%;
+  height: 300px;
+}
+#slider .container{
+  overflow: hidden;
+}
+#slider .container .sliderWrap{
+  display: flex;
+  width: 400%;
+}
+#slider .sliderWrap .slider{
+  width: 1200px;
+  position: relative;
+}
+#slider .sliderWrap .slider .text{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  padding: 20px 50px;
+}
+#slider .sliderWrap .slider .text h2{
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 3px;
+}
+#slider .sliderWrap .slider .text h2 strong{
+  color: orange;
+}
+#slider .sliderWrap .slider .text p{
+  color: #fff;
+  font-size: 20px;
+}
+/* contents */
+#contents{
+  width: 100%;
+}
+#contents .container{
+  display: flex;
+}
+#contents .container .info{
+  width: 400px;
+  height: 200px;
+  background-color: #c9c9c9;
+}
+/* gallery */
+#contents .container .gallery{
+  width: 400px;
+  height: 200px;
+  background-color: #e2e0d4;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+#contents .container .gallery h3{
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+#contents .container .gallery ul{
+  display: flex;
+  justify-content: space-between;
+}
+#contents .container .gallery ul li{
+  width: 120px;
+}
+#contents .container .gallery ul li a{
+  display: block;
+}
+#contents .container .gallery ul li a:hover img{
+  opacity: 0.8;
+}
+/* banner */
+#contents .container .banner{
+  width: 400px;
+  height: 200px;
+  /* background-color: #acabab; */
+  background-image: url(../images/banner.jpg);
+  text-align: center;
+}
+#contents .container .banner h3{
+  margin-top: 35px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+#contents .container .banner a{
+  background-color: #ebda6f;
+  padding: 10px 30px;
+  border-radius: 40px;
+}
+/* #contents .container .banner h3 a:hover{} */
+
+/* footer */
+#footer{
+  width: 100%;
+  background-color: #efefef;
+}
+#footer .container{
+  display: flex;
+}
+#footer .container .footer1{
+  width: 80%;
+}
+#footer .container .footer1 .footer1-1{
+  width: 100%;
+  height: 50px;
+  background-color: #b8b8b8;
+}
+#footer .container .footer1 .footer1-2{
+  width: 100%;
+  height: 50px;
+  background-color: #acacac;
+}
+#footer .container .footer2{
+  width: 20%;
+  height: 100px;
+  background-color: #9a9a9a;
+}
