@@ -1,0 +1,233 @@
+@charset "UTF-8";
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  color: #333;
+  text-decoration: none;
+}
+img{
+  vertical-align: top;
+}
+/* wrap */
+#wrap{
+  width: 100%;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.3);
+  height: inherit;
+}
+/* header */
+#header{
+  width: 100%;
+  background-color: #dfdfdf;
+}
+#header .container{
+  display: flex;
+}
+#header .container .logo{
+  width: 20%;
+  height: 100px;
+  background-color: #ede8e8;
+}
+/* nav */
+#header .container .nav{
+  width: 80%;
+  height: 100px;
+  background-color: #ede8e8;
+  z-index: 100;
+}
+#header .container .nav >ul{
+  display: flex;
+  justify-content: right;
+  margin: 57px;
+}
+#header .container .nav >ul>li>a{
+  background-color: #d5e4e2;
+  padding: 10px 50px;
+  display: inline-block;
+}
+#header .container .nav >ul>li>a:hover{
+  background-color: #ccd6d5;
+}
+#header .container .nav >ul>li>ul{
+  text-align: center;
+  display: none;
+}
+#header .container .nav >ul>li>ul>li>a{
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+#header .container .nav >ul>li>ul>li>a:hover{
+  background-color: #ececec;
+}
+/* 가상배경 */
+#header .container{
+  position: relative;
+}
+#header .container::after{
+  content: '';
+  width: 100%;
+  background-color: #ecececae;
+  position: absolute;
+  top: 100px;
+  height: 0;
+  transition: all 400ms;
+  z-index: 1;
+}
+#header .container.on::after{
+  height: 178px;
+}
+/* slider */
+#slider{
+  width: 100%;
+}
+#slider .container{
+  height: 300px;
+  overflow: hidden;
+}
+#slider .container .sliderWrap{
+  height: 400%;
+  /* position: relative; */
+}
+#slider .container .sliderWrap .slider{
+  position: relative;
+
+}
+#slider .container .sliderWrap .slider .text{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255,255,255,0.6);
+  padding: 2cqmax 60px;
+  text-align: center;
+}
+#slider .container .sliderWrap .slider .text h2{
+  font-size: 28px;
+}
+#slider .container .sliderWrap .slider .text p{
+  font-size: 20px;
+}
+/* contents */
+#contents{
+  width: 100%;
+}
+#contents .container{
+  display: flex;
+  height: 200px;
+}
+/* info */
+#contents .container .info{
+  width: 400px;
+  background-color: #e8e6e6;
+  padding: 10px;
+}
+#contents .container .info .info-menu{
+  padding-bottom: 8px;
+}
+#contents .container .info .info-menu .active{
+  text-decoration: underline;
+}
+#contents .container .info .info-menu a{
+  padding-right: 8px;
+}
+#contents .container .info .info-cont .notice{
+  line-height: 1.8;
+}
+#contents .container .info .info-cont .notice ul li{
+  display: flex;
+}
+#contents .container .info .info-cont .notice ul li a{
+  width: 75%;
+}
+#contents .container .info .info-cont .notice ul li a:hover{
+  text-decoration: underline;
+}
+#contents .container .info .info-cont .notice ul li span{
+  width: 25%;
+  text-align: right;
+}
+#contents .container .info .info-cont .gallery ul{
+  display: flex;
+  justify-content: space-between;
+}
+#contents .container .info .info-cont .gallery ul li a img{
+  width: 125px;
+  border: 3px solid transparent;
+}
+#contents .container .info .info-cont .gallery ul li a img:hover{
+  border-color: #929a99;
+}
+/* photo */
+#contents .container .photo{
+  width: 400px;
+  background-color: #d7d5d5;
+}
+#contents .container .link{
+  width: 400px;
+  background-color: #e8e6e6;
+}
+/* footer */
+#footer{
+  width: 100%;
+  background-color: #dfdfdf;
+}
+#footer .container{
+  display: flex;
+  height: 100px;
+}
+#footer .container .footer1{
+  width: 80%;
+  background-color: #d3d3d3;
+}
+#footer .container .footer2{
+  width: 20%;
+  background-color: #d3d3d3;
+}
+#footer .container .footer2 .footer2-1{
+  width: 100%;
+  height: 50px;
+  background-color: #edeaea;
+}
+#footer .container .footer2 .footer2-2{
+  width: 100%;
+  height: 50px;
+  background-color: #e3e0e0;
+}
+/* popup */
+#wrap{
+  position: relative;
+}
+.popup-view{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e1e0e0;
+  width: 300px;
+  height: 250px;
+  padding: 15px;
+  display: none;
+}
+.popup-view h3{
+  text-align: center;
+  padding-bottom: 8px;
+}
+.popup-view .popup-close{
+  position: absolute;
+  bottom: 5px;
+  background-color: #c7cfce;
+  padding: 5px 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

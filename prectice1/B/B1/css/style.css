@@ -1,0 +1,272 @@
+@charset "UTF-8";
+
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+img{
+  vertical-align: top;
+}
+/* */
+#wrap{
+  width: 100%;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* header */
+#header{
+  width: 100%;
+  background-color: #eae3e3;
+}
+#header .container{
+  display: flex;
+}
+#header .container .logo{
+  width: 20%;
+  height: 100px;
+  background-color: #d8e6ec;
+  text-align: center;
+}
+#header .container .logo a{
+  display: inline-block;
+  padding: 25px;
+}
+/* nav */
+#header .container .nav{
+  width: 80%;
+  height: 100px;
+  background-color: #cfe2eb;
+  z-index: 100;
+}
+#header .container .nav >ul{
+  display: flex;
+  justify-content: right;
+  margin: 45px;
+}
+#header .container .nav >ul>li>a{
+  padding: 10px 40px;
+  background-color: #3f6675;
+  display: inline-block;
+  color: #f8f8f8;
+}
+#header .container .nav >ul>li>a:hover{
+  background-color: #365663;
+}
+#header .container .nav >ul>li>ul{
+  text-align: center;
+  background-color: #e4e2e2;
+  /* 서브메뉴 높이 동일하게 하기 위해 */
+  height: 176px;
+  display: none;
+}
+#header .container .nav >ul>li>ul>li>a{
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+#header .container .nav >ul>li>ul>li>a:hover{
+  background-color: #cad9ef;
+}
+/* slider */
+#slider{
+  width: 100%;
+  height: 300px;
+}
+#slider .container{
+  overflow: hidden;
+}
+#slider .container .sliderWrap{
+  display: flex;
+  width: 400%;
+}
+#slider .container .sliderWrap .slider{
+  position: relative;
+}
+#slider .container .sliderWrap .slider .text{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px 60px;
+  text-align: center;
+  line-height: 1.7;
+}
+#slider .container .sliderWrap .slider .text h2{
+  font-size: 30px;
+}
+#slider .container .sliderWrap .slider .text p{
+  font-size: 22px;
+}
+/* contents */
+#contents{
+  width: 100%;
+}
+#contents .container{
+  display: flex;
+}
+#contents .container h3{
+  font-size: 23px;
+}
+/* info */
+#contents .container .info{
+  width: 400px;
+  height: 200px;
+  background-color: #dde6de;
+}
+#contents .container .info .info-menu{
+  padding: 10px 0 0 5px;  /*상우하좌*/
+}
+#contents .container .info .info-menu a{
+  margin-right: 10px;
+}
+#contents .container .info .info-menu .active{
+  text-decoration: underline;
+}
+#contents .container .info .info-cont{
+  padding: 10px;
+}
+#contents .container .info .info-cont .notice{
+  line-height: 1.6;
+  /* display: none; */
+}
+#contents .container .info .info-cont .notice ul li a{
+  font-size: 17px;
+  width: 75%;
+}
+#contents .container .info .info-cont .notice ul li span{
+  width: 25%;
+  text-align: right;
+}
+#contents .container .info .info-cont .notice ul li a:hover{
+  text-decoration: underline;
+}
+#contents .container .info .info-cont .gallery ul{
+  display: flex;
+  justify-content: space-between;
+}
+#contents .container .info .info-cont .gallery ul li a img{
+  width: 120px;
+  border: 3px solid transparent;
+}
+#contents .container .info .info-cont .gallery ul li a img:hover{
+  border-color: #868585;
+}
+/* banner */
+#contents .container .banner{
+  width: 400px;
+  height: 200px;
+  background-color: #d1d4d1;
+  background-image: url(../images/banner.jpg);
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+#contents .container .banner h3{
+  padding-bottom: 10px;
+}
+#contents .container .banner p{
+  background-color: rgba(255, 255, 255, 0.6); 
+  display: inline-block;
+  padding: 5px 15px;
+  width: 150px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* link */
+#contents .container .link{
+  width: 400px;
+  height: 200px;
+  background-color: #dde6de;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+#contents .container .link ul{
+  line-height: 2;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+#contents .container .link ul>li>a:hover{
+  text-decoration: underline;
+}
+/* footer */
+#footer{
+  width: 100%;
+  background-color: #eae3e3;
+}
+#footer .container{
+  height: 100px;
+  display: flex;
+}
+#footer .container .footer1{
+  width: 20%;
+  background-color: #f3e5e5;
+}
+#footer .container .footer2{
+  width: 80%;
+}
+#footer .container .footer2 .footer2-1{
+  width: 100%;
+  height: 50px;
+  background-color: #ddd4d4;
+}
+#footer .container .footer2 .footer2-2{
+  width: 100%;
+  height: 50px;
+  background-color: #d6d1d1;
+}
+/* popup */
+#wrap{
+  position: relative;
+}
+.popup-view{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 300px;
+  background-color: #f5f1f1;
+  padding: 10px;
+  display: none;
+}
+.popup-view h3{
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.popup-view p{
+  padding-top: 5px;
+  line-height: 1.6;
+  font-size: 17px;
+}
+.popup-close{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e5cfcf;
+  padding: 5px 10px;
+}
