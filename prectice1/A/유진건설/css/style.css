@@ -1,0 +1,242 @@
+@charset "UTF-8";
+body{background-color: #fff; color: #333;}
+*{margin: 0;padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: #333;}
+img{vertical-align: top; width: 100%;}
+/*  */
+#wrap{
+  width: 1200px;
+  margin: 0 auto;
+}
+/* header */
+#header{
+  width: 100%;
+  height: 100px;
+  background-color: #4a72b7;
+  display: flex;
+}
+#header .logo{
+  width: 200px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#header .nav{
+  width: 1000px;
+  height: 100px;
+  text-align: center;
+  z-index: 1000;
+}
+#header .nav >ul{
+  display: flex;
+  justify-content: right;
+  margin: 56px;
+}
+#header .nav >ul>li>a{
+  padding: 10px 60px;
+  background-color: #fcfe91;
+  display: inline-block;
+}
+#header .nav >ul>li>a:hover{
+  background-color: #e8ea89;
+
+}
+#header .nav >ul>li>ul{
+  display: none;
+}
+#header .nav >ul>li>ul>li>a{
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+#header .nav >ul>li>ul>li>a:hover{
+  background-color: #e8ea89;
+}
+/* 가상배경 */
+#header{
+  position: relative;
+}
+#header::after{
+  position: absolute;
+  background-color: #ffffff;
+  left: 0;
+  top: 100px;
+  content: '';
+  height: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 600ms;
+}
+#header.on::after{
+  height: 135px;
+}
+/* slider */
+#slider{
+  width: 100%;
+  height: 300px;
+}
+#slider .sliderWrap{
+  position: relative;
+}
+#slider .sliderWrap .images{
+  position: absolute;
+}
+/* contents */
+#contents{
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
+#contents .menu{
+  padding: 10px;
+}
+/* noti */
+#contents .notice{
+  width: 400px;
+  height: 200px;
+  border-right: #333 1px solid;
+}
+#contents .notice .noti-cont{
+  padding: 0 20px;
+  line-height: 1.8;
+}
+#contents .notice .noti-cont >ul>li{
+  display: flex;
+}
+#contents .notice .noti-cont >ul>li>a{
+  width: 70%;
+}
+#contents .notice .noti-cont >ul>li>a:hover{
+  text-decoration: underline;
+}
+#contents .notice .noti-cont >ul>li>span{
+  width: 30%;
+  display: flex;
+  justify-content: right;
+}
+/* gal */
+#contents .gallery{
+  width: 400px;
+  height: 200px;
+  background-color: #fff;
+  border-right: #333 1px solid;
+}
+#contents .gallery >ul{
+  display: flex;
+}
+#contents .gallery >ul>li{
+  padding: 5px;
+}
+#contents .gallery >ul>li>a:hover{
+  opacity: 0.8;
+}
+/* link */
+#contents .link{
+  width: 400px;
+  height: 200px;
+  background-image: url(../images/link.png);
+  position: relative;
+}
+#contents .link .link-text{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#contents .link .link-text h2{
+  padding-bottom: 40px;
+}
+#contents .link .link-text a{
+  background-color: #4a72b787;
+  padding: 5px 15px;
+  transition: all 600ms;
+  border: #333 solid 1px;
+}
+#contents .link .link-text a:hover{
+  border-radius: 100px;
+  transition: all 600ms;
+}
+
+/* footer */
+#footer{
+  width: 100%;
+  height: 100px;
+  background-color: #9a9a9a;
+  display: flex;
+}
+#footer .footer1{
+  width: 1000px;
+}
+#footer .footer1 .f-menu{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .footer1 .f-menu>ul{
+  display: flex;
+}
+#footer .footer1 .f-menu>ul>li:last-child>a{
+  border-right: none;
+}
+#footer .footer1 .f-menu>ul>li>a{
+  border-right: 1px solid #333;
+  padding: 0 20px;
+}
+#footer .footer1 .f-menu>ul>li>a:hover{
+  text-decoration: underline;
+}
+#footer .footer1 .f-copy{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .footer2{
+  width: 200px;
+  height: 100%;
+  position: relative;
+}
+#footer .footer2 select{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+  height: 25px;
+}
+/* popup */
+#wrap{
+  position: relative;
+}
+.popup-view{
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  background-color: #fdffea;
+  padding: 20px;
+  left: 50%; top: 50%; transform: translate(-50%,-50%);
+}
+.popup-view h3{
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: #333 solid 1px;
+}
+.popup-view p{
+  padding-top: 10px;
+}
+.popup-view .popup-close{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 5px 10px;
+  background-color: #4a72b7;
+  color: #fff;
+}
