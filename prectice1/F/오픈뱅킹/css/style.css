@@ -1,0 +1,299 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+body{background-color: #fff; color: #666;}
+a{color: #666; text-decoration: none;}
+li{list-style: none;}
+img{vertical-align: top; width: 100%;}
+/*  */
+#wrap{
+  width: 100%;
+}
+.container{
+  margin: 0 auto;
+  width: 1340px;
+  height: inherit;
+}
+/* header */
+#header{
+  width: 100%;
+}
+#header .container{
+  height: 100px;
+  display: flex;
+  background-color: #0a9b97;
+}
+#header .container .logo{
+  width: 200px; height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .container .nav{
+  width: 1140px;  height: 100px;
+  z-index: 100;
+}
+#header .container .nav >ul{
+  display: flex;
+  justify-content: right;
+  margin: 56px;
+  text-align: center;
+}
+#header .container .nav >ul>li>a{
+  background-color: #f04467;
+  padding: 10px 50px;
+  display: inline-block;
+  color: #000;
+}
+#header .container .nav >ul>li>a:hover{
+  background-color: #ef224b;
+}
+#header .container .nav >ul>li{
+  position: relative;
+}
+#header .container .nav >ul>li>ul{
+  width: 100%;
+  position: absolute;
+  display: none;
+}
+#header .container .nav >ul>li>ul>li>a{
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  color: #fff;
+}
+#header .container .nav >ul>li>ul>li>a:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+/* 가상배경 */
+#header {
+  position: relative;
+}
+#header::after{
+  width: 100%; height: 0;
+  background-color: rgba(0,0,0,0.5);
+  content: '';
+  position: absolute;
+  left: 0;
+  top:100px;
+  transition: all 400ms;
+}
+#header.on::after{
+  height: 176px;
+}
+
+/* slider */
+#slider{
+  width: 100%;
+  height: 350px;
+  background-color: #b2b2b2;
+  overflow: hidden;
+  z-index: -1;
+}
+#slider .sliderWrap{
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+#slider .sliderWrap .images{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+#slider .sliderWrap .images.s1{
+  background-image: url(../images/slider1.png);
+}
+#slider .sliderWrap .images.s2{
+  background-image: url(../images/slider2.png);
+}
+#slider .sliderWrap .images.s3{
+  background-image: url(../images/slider3.png);
+}
+/* main */
+#main{
+  width: 100%;
+}
+#main .container{
+  height: 550px;
+  position: relative;
+}
+/* link */
+#main .container .link{
+  width: 100%;
+  height: 100px;
+  background-color: #f04466af;
+  position: absolute;
+  left: 0%; top: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main .container .link >ul{
+  display: flex;
+}
+#main .container .link >ul>li{
+  position: relative;
+  padding: 20px;
+}
+#main .container .link .b-text{
+  position: absolute;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  background-color: #f04466a9;
+  padding: 5px 10px;
+  color: #000;
+}
+/* banner */
+#main .container .banner{
+  width: 100%;
+  height: 200px;
+  /* background-color: #a8a8a8; */
+  display: flex;
+  padding: 10px;
+  border-bottom: #000 solid 1px;
+}
+#main .container .banner .b-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main .container .banner .b-text{
+  width: 1000px;
+  padding: 20px 30px;
+  line-height: 2;
+}
+#main .container .banner .b-arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main .container .banner {}
+/* info */
+#main .container .info{
+  width: 100%;
+  height: 350px;
+  /* background-color: #c0c0c0; */
+  padding: 10px 20px;
+}
+#main .container .info .info-menu{}
+#main .container .info .info-menu .active{
+  text-decoration: underline;
+  color: #000;
+}
+#main .container .info .info-menu >a{
+  padding: 5px 10px 2px 10px;
+  background-color: #d9f0ef;
+  border: #000 solid 2px;
+  border-bottom: none;
+}
+#main .container .info .info-cont{
+  padding: 10px 20px;
+  border: #000 solid 2px;
+  width: 1000px;
+  height: 280px;
+  background-color: #d9f0ef;
+}
+#main .container .info .info-cont .notice{
+  padding-top: 10px;
+  line-height: 2;
+  font-size: 20px;
+}
+#main .container .info .info-cont .notice>ul>li{
+  display: flex;
+}
+#main .container .info .info-cont .notice>ul>li>a{
+  width: 70%;
+}
+#main .container .info .info-cont .notice>ul>li>a:hover{
+  text-decoration: underline;
+}
+#main .container .info .info-cont .notice>ul>li>span{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+#main .container .info .info-cont .gallery{
+  text-align: center;
+}
+#main .container .info .info-cont .gallery >ul{
+  display: flex;
+  justify-content: space-between;
+}
+#main .container .info .info-cont .gallery >ul>li{
+  padding: 10px;
+}
+#main .container .info .info-cont .gallery >ul>li>a:hover{
+  opacity: 0.8;
+}
+/* footer */
+#footer{
+  width: 100%;
+}
+#footer .container{
+  height: 120px;
+  display: flex;
+  background-color: #aaa;
+}
+#footer .container .f-logo{
+  width: 200px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer .container .f-sub{
+  width: 1140px;
+}
+#footer .container .f-sub .f-menu{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+#footer .container .f-sub .f-menu>ul{
+  display: flex;
+}
+#footer .container .f-sub .f-menu>ul>li>a{
+  padding: 0 10px;
+  border-right: #666 solid 1px;
+}
+#footer .container .f-sub .f-menu>ul>li:last-child>a{
+  border-right: none;
+}
+#footer .container .f-sub .f-menu>ul>li>a:hover{
+  text-decoration: underline;
+}
+#footer .container .f-sub .f-copy{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+}
+/* popup */
+#wrap{
+  position: relative;
+}
+.popup-view{
+  position: absolute;
+  left: 50%; top: 30%; transform: translate(-50%, -50%);
+  width: 500px; height: 300px;
+  background-color: #fff;
+  padding: 20px;
+}
+.popup-view .popup-close{
+  position: absolute;
+  left: 50%; bottom: 10px; transform: translate(-50%, -50%);
+  background-color: #b1b1b1;
+  padding: 5px 10px;
+}
+.popup-view h3{
+  text-align: center;
+  padding: 10px;
+  border-bottom: #666 1px solid;
+}
+.popup-view p{
+  padding-top: 10px;
+}
